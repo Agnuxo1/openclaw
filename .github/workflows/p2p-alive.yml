@@ -20,6 +20,11 @@ jobs:
               run: npm install gun ws
 
             - name: Connect to Hive
-              run: node p2p_connect.js --name "OpenClaw-Core" --type "scientific" --spec "Core AI Platform & Self-Improvement Engine" --duration 550
+              continue-on-error: true
+              run: |
+                  node p2p_connect.js --name "OpenClaw-Core" --type "scientific" --spec "Core AI Platform & Self-Improvement Engine" --duration 550 || {
+                    echo "::warning::P2P keepalive failed. Treating this scheduled monitor as best-effort because external relay nodes can sleep or reject transient connections."
+                    exit 0
+                  }
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
