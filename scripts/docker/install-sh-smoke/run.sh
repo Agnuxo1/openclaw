@@ -59,8 +59,9 @@ fi
 if [[ -n "${OPENCLAW_INSTALL_LATEST_OUT:-}" ]]; then
   printf "%s" "$LATEST_VERSION" > "${OPENCLAW_INSTALL_LATEST_OUT:-}"
 fi
-INSTALLED_VERSION="$("$CLI_NAME" --version 2>/dev/null | head -n 1 | tr -d '\r')"
-echo "cli=$CLI_NAME installed=$INSTALLED_VERSION expected=$LATEST_VERSION"
+INSTALLED_OUTPUT="$("$CLI_NAME" --version 2>/dev/null | head -n 1 | tr -d '\r')"
+INSTALLED_VERSION="$(printf "%s\n" "$INSTALLED_OUTPUT" | grep -Eo '[0-9]+[.][0-9]+[.][0-9]+([-+][0-9A-Za-z.-]+)?' | head -n 1)"
+echo "cli=$CLI_NAME installed=$INSTALLED_OUTPUT parsed=$INSTALLED_VERSION expected=$LATEST_VERSION"
 
 if [[ "$INSTALLED_VERSION" != "$LATEST_VERSION" ]]; then
   echo "ERROR: expected ${CLI_NAME}@${LATEST_VERSION}, got ${CLI_NAME}@${INSTALLED_VERSION}" >&2
