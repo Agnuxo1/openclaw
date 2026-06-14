@@ -18,16 +18,16 @@ jobs:
 
             - name: Install P2P Dependencies
               run: |
-                  mkdir -p .p2p-runtime
-                  cp p2p_connect.js .p2p-runtime/
-                  cd .p2p-runtime
-                  npm init -y
+                  mkdir -p p2p-runtime
+                  cp p2p_connect.js p2p-runtime/
+                  cd p2p-runtime
+                  printf '{"name":"p2p-runtime","version":"1.0.0","private":true}\n' > package.json
                   npm install gun ws --no-audit --no-fund
 
             - name: Connect to Hive
               continue-on-error: true
               run: |
-                  cd .p2p-runtime
+                  cd p2p-runtime
                   node p2p_connect.js --name "OpenClaw-Core" --type "scientific" --spec "Core AI Platform & Self-Improvement Engine" --duration 550 || {
                     echo "::warning::P2P keepalive failed. Treating this scheduled monitor as best-effort because external relay nodes can sleep or reject transient connections."
                     exit 0
