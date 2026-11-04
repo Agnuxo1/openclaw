@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "repository": "Agnuxo1/openclaw",
+  "snapshot_date": "2026-11-05",
+  "branch_at_snapshot": "main",
+  "attribution_commit_base": {
+    "commit": "e27705b698d568bf9176cdbfb3c4f8988c491a83",
+    "parent": "537205cd2e8d1a8b35bbc01695973e65d811385d",
+    "tree": "534d24bdd1026e1070d80b074a2a73ba5de619cb",
+    "upstream_repository": "openclaw/openclaw",
+    "matching_upstream_commit": "e27705b698d568bf9176cdbfb3c4f8988c491a83",
+    "matching_upstream_tree": "534d24bdd1026e1070d80b074a2a73ba5de619cb"
+  },
+  "preserved_license": {
+    "path": "LICENSE",
+    "mode": "100644",
+    "blob": "f7b526698bb7ed2d26d96c49f2f32234c88f69bc",
+    "github_spdx_metadata": "MIT",
+    "interpretation": "preserved upstream material; no new grant"
+  },
+  "fork_commit_parent_diff": [
+    {
+      "path": "pnpm-lock.yaml",
+      "additions": 89,
+      "deletions": 73,
+      "classification": "generated dependency lockfile"
+    }
+  ],
+  "provenance_commit_additions": [
+    "FORK_PROVENANCE.md",
+    "provenance.json",
+    "provenance-baseline.json"
+  ],
+  "preservation_policy": {
+    "inherited_tree_contents_modified_by_provenance_update": false,
+    "upstream_file_headers_added": false,
+    "source_authorship_claimed": false,
+    "cryptographic_signature_claimed": false
+  }
+}

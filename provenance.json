@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "snapshot": {
+    "date": "2026-11-05",
+    "repository": "Agnuxo1/openclaw",
+    "visibility": "public",
+    "default_branch": "main",
+    "fork": true,
+    "parent_repository": "openclaw/openclaw",
+    "created_at": "2026-02-14T14:37:39Z"
+  },
+  "attestation": {
+    "type": "self_attested",
+    "author": {
+      "name": "Francisco Angulo de Lafuente",
+      "github_account": "Agnuxo1",
+      "orcid": "https://orcid.org/0009-0001-1634-7063"
+    },
+    "scope": [
+      "publication and maintenance of this fork",
+      "authorship of FORK_PROVENANCE.md and the provenance records"
+    ],
+    "excludes": [
+      "authorship of inherited OpenClaw source, documentation, assets, or dependencies",
+      "cryptographic signature",
+      "new or expanded license grant"
+    ]
+  },
+  "baseline": {
+    "fork_head_at_snapshot": "e27705b698d568bf9176cdbfb3c4f8988c491a83",
+    "tree": "534d24bdd1026e1070d80b074a2a73ba5de619cb",
+    "parent": "537205cd2e8d1a8b35bbc01695973e65d811385d",
+    "matching_upstream_commit": "openclaw/openclaw@e27705b698d568bf9176cdbfb3c4f8988c491a83",
+    "matching_upstream_tree": "534d24bdd1026e1070d80b074a2a73ba5de619cb",
+    "root_license_blob": "f7b526698bb7ed2d26d96c49f2f32234c88f69bc"
+  },
+  "fork_commit_delta": {
+    "comparison": "e27705b698d568bf9176cdbfb3c4f8988c491a83 versus parent 537205cd2e8d1a8b35bbc01695973e65d811385d",
+    "files": [
+      {
+        "path": "pnpm-lock.yaml",
+        "additions": 89,
+        "deletions": 73,
+        "classification": "generated dependency lockfile"
+      }
+    ]
+  },
+  "attribution": {
+    "attributed_paths": [
+      "FORK_PROVENANCE.md",
+      "provenance.json",
+      "provenance-baseline.json"
+    ],
+    "inherited_tree_changed": false,
+    "upstream_file_headers_added": false,
+    "cryptographically_signed": false
+  },
+  "license": {
+    "github_spdx_metadata": "MIT",
+    "root_license_preserved": true,
+    "rights_independently_verified_per_file": false,
+    "license_added_or_changed": false
+  },
+  "security_review": {
+    "scope": "redacted pattern scan of inherited README only",
+    "high_confidence_credential_patterns": 0,
+    "email_pattern_matches": 0,
+    "unconfirmed_phone_pattern_matches": 77,
+    "full_tree_blob_scan": false
+  }
+}
