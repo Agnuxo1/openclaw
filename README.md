@@ -37,6 +37,10 @@ New install? Start here: [Getting started](https://docs.openclaw.ai/start/gettin
 
 Model note: while any model is supported, I strongly recommend **Anthropic Pro/Max (100/200) + Opus 4.6** for long‑context strength and better prompt‑injection resistance. See [Onboarding](https://docs.openclaw.ai/start/onboarding).
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> This fork retains the upstream OpenClaw personal-assistant platform, bringing messaging channels, tools and device access behind a common gateway. Reusing that established integration layer can reduce the work required to connect everyday services and build agent workflows. The <a href="FORK_PROVENANCE.md">fork provenance record</a> distinguishes upstream authorship from repository-specific contributions; no new performance advantage is implied by the fork itself.</sub>
+<!-- impact-note:end -->
+
 ## Models (selection + auth)
 
 - Models config + CLI: [Models](https://docs.openclaw.ai/concepts/models)
